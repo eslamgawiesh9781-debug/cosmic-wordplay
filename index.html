@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cosmic Wordplay | الخرزك فلكيًا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Cairo", Arial, sans-serif;
+      background: radial-gradient(circle at top, #0b1d3a, #020617);
+      color: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 40px rgba(0,153,255,0.3);
+      backdrop-filter: blur(8px);
+    }
+    h1 { color:#7dd3fc; }
+    .word {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #38bdf8;
+      margin: 20px 0;
+    }
+    button {
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 25px;
+      min-height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cosmic Wordplay</h1>
+    <h2>تفكيك كلمة "الخرزك" فلكيًا</h2>
+
+    <div class="word">الخرزك</div>
+
+    <button onclick="analyzeWord()">ابدأ التفكيك</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function analyzeWord() {
+      const data = [
+        "الخـر: عبور واختراق.",
+        "ز: طاقة واهتزاز.",
+        "ك: نواة ومركز.",
+        "الخرزك: مسار طاقة كوني."
+      ];
+      const r = document.getElementById("result");
+      r.innerHTML = "";
+      data.forEach((t,i)=>{
+        setTimeout(()=>{ r.innerHTML += "• "+t+"<br>"; }, i*600);
+      });
+    }
+  </script>
+</body>
+</html>
